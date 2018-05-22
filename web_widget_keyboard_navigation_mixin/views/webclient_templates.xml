@@ -1,0 +1,14 @@
+<openerp>
+    <data>
+        
+        <template id="assets_backend" inherit_id="web.assets_backend">
+            <xpath expr="." position="inside">
+                <script
+                    type="text/javascript"
+                    src="/web_widget_keyboard_navigation_mixin/static/src/js/web_widget_keyboard_navigation_mixin.js">
+                </script>
+           </xpath>
+        </template>
+
+    </data>
+</openerp>

@@ -1,0 +1,14 @@
+.oe_web_accesskey_overlay {
+    font-family: $font-family-sans-serif;
+    position: absolute;
+    width: 00%;
+    height: 00%;
+    left: 0;
+    top: 0;
+    background-color: rgba(0,0,0,.6);
+    color: #FFFFFF;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
