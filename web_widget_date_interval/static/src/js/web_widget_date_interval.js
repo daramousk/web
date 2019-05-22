@@ -1,26 +1,19 @@
-// -*- coding: utf-8 -*-
-// © 2017 Therp BV <http://therp.nl>
-// License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
+// Copyright 2017 Therp BV <https://therp.nl>
+// License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl.html).
 
-/* eslint require-jsdoc:0 */
+odoo.web_widget_date_interval = function (require) {
+    'use_strict';
 
-openerp.web_widget_date_interval = function (instance) {
-    "use strict";
-    instance.web.form.widgets.add(
-        'date_interval',
-        'instance.web_widget_date_interval.FieldDateInterval');
-    instance.web_widget_date_interval.FieldDateInterval =
-    instance.web.form.AbstractField.extend(
-        instance.web.form.ReinitializeFieldMixin,
-        {
-            events: {
+    var FieldDateInterval = AbstractField.Extend(
+        ReinitializeFieldMixin,
+            events: _.extend(AbstractField.prototype.events, {
                 'click .weeknumber_iso .years button':
                 'weeknumber_iso_onchange_year',
                 'change .weeknumber_iso .weeks select':
                 'weeknumber_iso_onchange_week',
                 'click .weeknumber_iso .weeks button':
                 'weeknumber_iso_onchange_week',
-            },
+            }),
             default_options: {
                 type: 'weeknumber_iso',
                 years_before: 5,
@@ -152,4 +145,7 @@ openerp.web_widget_date_interval = function (instance) {
             },
         }
     );
+    var fields_registry = new Registry();
+    fields_registry.add('date_interval', FieldDateInterval)
+    return {registry: fields_registry}
 };

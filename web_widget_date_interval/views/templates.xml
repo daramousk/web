@@ -9,9 +9,6 @@
                 type="text/javascript"
                 src="/web_widget_date_interval/static/src/js/web_widget_date_interval.js">
             </script>
-            <link
-                rel="stylesheet"
-                href="/web_widget_date_interval/static/src/css/web_widget_date_interval.css"/>
         </xpath>
     </template>
 </odoo>
