@@ -212,7 +212,7 @@ odoo.define('web_widget_date_interval', function(require) {
 
             if(this.$buttons && !this.options.disable_date_interval) {
                 _(this.date_intervals).each(function(widget) {
-                    deferreds.push(widget.appendTo(self.$buttons));
+                    deferreds.push(widget.prependTo(self.$buttons));
                 });
             }
 

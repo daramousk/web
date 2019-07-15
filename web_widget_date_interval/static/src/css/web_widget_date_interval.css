@@ -1,6 +1,7 @@
 div.o_date_interval > button > a
 {
     color: #4c4c4c;
+    font-size: large;
 }
 div.o_date_interval > button > a.selected
 {
